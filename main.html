@@ -53,11 +53,12 @@
             let res = 0;
             console.log(parseInt(pricelist[0].innerText)+10);
             for(let i=0;i<qtylist.length;i++){
-                res += (parseInt(qtylist[i].innerText) * parseInt(pricelist[i].innerText))
+	            total.innerText += (parseInt(qtylist[i].innerText) * parseInt(pricelist[i].innerText))
                 // console.log("hello");
             }
             // console.log("res : "+res);
-            // total.innerText = res;
+             = res;
+			
         }
     </script>
 
