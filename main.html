@@ -7,21 +7,22 @@
 </head>
 
 <body>
-	<input type="text" name="name" id="name">
-	<input type="text" name="price" id="price">
+	   <input type="text" name="name" id="item-name-input">
+    <input type="text" name="price" id="item-name-price">
 
-	<button id="add" onclick="handleClick()">Add</button>
+    <button id="add" onclick="handleClick()">Add</button>
 
-	<table border=1>
-		<tr id="gt">
-			<td rowspan="2"><h3>grand total = 0</h3></td>
-		</tr>
-	</table>
-	
-	<!-- the entire body must be written by student -->
-    <script type="text/javascript" src="./script.js">
-</script>
-
+    <table border="1">
+        <tr>
+            <th id="name">Name</th>
+            <th id="price">Price</th>
+        </tr>
+        <tr id="gt">
+            <td rowspan="2">
+                <h3 id="total">grand total = 0</h3>
+            </td>
+        </tr>
+    </table>
 </body>
 
 </html>
