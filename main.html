@@ -3,12 +3,13 @@
 <html>
 
 <head>
-	<link rel="stylesheet" href="./styles.css">
 </head>
 
 <body>
-	   <input type="text" name="name" id="item-name-input">
-    <input type="text" name="price" id="item-name-price">
+    <input type="text" name="name" id="item-name-input">
+    <input type="text" name="price" id="item-price-input">
+    <input type="text" name="qty" id="item-qty-input">
+
 
     <button id="add" onclick="handleClick()">Add</button>
 
@@ -23,6 +24,31 @@
             </td>
         </tr>
     </table>
+
+    <!-- the entire body must be written by student -->
+    <script>
+        //your code here
+        function handleClick() {
+            var name = document.getElementById("item-name-input")
+            var price = document.getElementById("item-price-input")
+            var qty = document.getElementById("item-qty-input")
+            var gt = document.getElementById('gt');
+            var table = document.getElementsByTagName("table")[0];
+            // var gt = document.getElementById("").value
+
+            var tr1 = document.createElement('tr');
+            tr1.innerHTML = ` <td>${name.value}</td>
+                             <td>${qty.value}</td>
+                            <td>${price.value}</td>`
+
+            // console.log(tr,gt);
+
+            // table.insertAdjacentElement(tr1, gt);
+            table.appendChild(tr1);
+
+        }
+    </script>
+
 </body>
 
 </html>
