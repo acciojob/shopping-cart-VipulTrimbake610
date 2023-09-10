@@ -20,7 +20,7 @@
         </tr>
         <tr id="gt">
             <td rowspan="2">
-                <h3 id="total">grand total = 0</h3>
+                <h3 id="total"></h3>
             </td>
         </tr>
     </table>
@@ -32,6 +32,7 @@
             var name = document.getElementById("item-name-input")
             var price = document.getElementById("item-price-input")
             var qty = document.getElementById("item-qty-input")
+            var total = document.getElementById("total")
             var gt = document.getElementById('gt');
             var table = document.getElementsByTagName("table")[0];
             // var gt = document.getElementById("").value
@@ -45,7 +46,18 @@
 
             // table.insertAdjacentElement(tr1, gt);
             table.appendChild(tr1);
+            
+            let qtylist = document.getElementsByClassName("qty");
+            let pricelist = document.getElementsByClassName('price');
 
+            let res = 0;
+            console.log(parseInt(pricelist[0].innerText)+10);
+            for(let i=0;i<qtylist.length;i++){
+                res += (parseInt(qtylist[i].innerText) * parseInt(pricelist[i].innerText))
+                console.log("hello");
+            }
+            console.log("res : "+res);
+            total.innerText = res;
         }
     </script>
 
